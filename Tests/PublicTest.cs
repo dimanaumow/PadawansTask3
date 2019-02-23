@@ -10,6 +10,8 @@ namespace PadawansTask3.Tests
         [TestCase(1, 1, ExpectedResult = 1)]
         [TestCase(8, 9, ExpectedResult = 1)]
         [TestCase(50, 250, ExpectedResult = 50)]
+        [TestCase(4,0, ExpectedResult = 4)]
+        [TestCase(0,4, ExpectedResult = 4)]
         public int GcdTests(int a, int b) => Gcd(a, b);
     }
 }

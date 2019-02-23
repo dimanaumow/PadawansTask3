@@ -6,14 +6,15 @@ namespace PadawansTask3
     {
         public static int Gcd(int a, int b)
         {
-
-            if (a == 0 && b == 0)
-            {
-                throw new DivideByZeroException();
-            }
-
             a = Math.Abs(a);
             b = Math.Abs(b);
+
+            if (a < b)
+            {
+                int temp = a;
+                a = b;
+                b = temp; 
+            }
 
             if (b == 0)
             {
