@@ -6,8 +6,24 @@ namespace PadawansTask3
     {
         public static int Gcd(int a, int b)
         {
-            // put your code here
-            throw new NotImplementedException();
+
+            if (a == 0 && b == 0)
+            {
+                throw new DivideByZeroException();
+            }
+
+            a = Math.Abs(a);
+            b = Math.Abs(b);
+
+            if (b == 0)
+            {
+                return a;
+            }
+
+            else
+            {
+                return Gcd(b, a % b);
+            }
         }
     }
 }
